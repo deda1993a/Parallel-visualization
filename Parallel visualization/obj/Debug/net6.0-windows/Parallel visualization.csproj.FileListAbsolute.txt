@@ -16,3 +16,21 @@ C:\Users\demet\source\repos\Parallel visualization\Parallel visualization\obj\De
 C:\Users\demet\source\repos\Parallel visualization\Parallel visualization\obj\Debug\net6.0-windows\Parallel visualization.genruntimeconfig.cache
 C:\Users\demet\source\repos\Parallel visualization\Parallel visualization\obj\Debug\net6.0-windows\ref\Parallel visualization.dll
 C:\Users\demet\source\repos\Parallel visualization\Parallel visualization\obj\Debug\net6.0-windows\Parallel_visualization.Form2.resources
+C:\Users\demet\Source\Repos\Parallel-visualization2024v1\Parallel visualization\bin\Debug\net6.0-windows\Parallel visualization.exe
+C:\Users\demet\Source\Repos\Parallel-visualization2024v1\Parallel visualization\bin\Debug\net6.0-windows\Parallel visualization.deps.json
+C:\Users\demet\Source\Repos\Parallel-visualization2024v1\Parallel visualization\bin\Debug\net6.0-windows\Parallel visualization.runtimeconfig.json
+C:\Users\demet\Source\Repos\Parallel-visualization2024v1\Parallel visualization\bin\Debug\net6.0-windows\Parallel visualization.dll
+C:\Users\demet\Source\Repos\Parallel-visualization2024v1\Parallel visualization\bin\Debug\net6.0-windows\Parallel visualization.pdb
+C:\Users\demet\Source\Repos\Parallel-visualization2024v1\Parallel visualization\obj\Debug\net6.0-windows\Parallel visualization.csproj.AssemblyReference.cache
+C:\Users\demet\Source\Repos\Parallel-visualization2024v1\Parallel visualization\obj\Debug\net6.0-windows\Parallel_visualization.Form1.resources
+C:\Users\demet\Source\Repos\Parallel-visualization2024v1\Parallel visualization\obj\Debug\net6.0-windows\Parallel_visualization.Form2.resources
+C:\Users\demet\Source\Repos\Parallel-visualization2024v1\Parallel visualization\obj\Debug\net6.0-windows\Parallel visualization.csproj.GenerateResource.cache
+C:\Users\demet\Source\Repos\Parallel-visualization2024v1\Parallel visualization\obj\Debug\net6.0-windows\Parallel visualization.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\demet\Source\Repos\Parallel-visualization2024v1\Parallel visualization\obj\Debug\net6.0-windows\Parallel visualization.AssemblyInfoInputs.cache
+C:\Users\demet\Source\Repos\Parallel-visualization2024v1\Parallel visualization\obj\Debug\net6.0-windows\Parallel visualization.AssemblyInfo.cs
+C:\Users\demet\Source\Repos\Parallel-visualization2024v1\Parallel visualization\obj\Debug\net6.0-windows\Parallel visualization.csproj.CoreCompileInputs.cache
+C:\Users\demet\Source\Repos\Parallel-visualization2024v1\Parallel visualization\obj\Debug\net6.0-windows\Parallel visualization.dll
+C:\Users\demet\Source\Repos\Parallel-visualization2024v1\Parallel visualization\obj\Debug\net6.0-windows\refint\Parallel visualization.dll
+C:\Users\demet\Source\Repos\Parallel-visualization2024v1\Parallel visualization\obj\Debug\net6.0-windows\Parallel visualization.pdb
+C:\Users\demet\Source\Repos\Parallel-visualization2024v1\Parallel visualization\obj\Debug\net6.0-windows\Parallel visualization.genruntimeconfig.cache
+C:\Users\demet\Source\Repos\Parallel-visualization2024v1\Parallel visualization\obj\Debug\net6.0-windows\ref\Parallel visualization.dll

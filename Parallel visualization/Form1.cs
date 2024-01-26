@@ -11,7 +11,7 @@ namespace Parallel_visualization
         {
            
             Form Form2 = new Form2();
-            Form2.Size=new Size(816, 489);
+           // Form2.Size=new Size(816, 489);
           
             Form2.Show();
           

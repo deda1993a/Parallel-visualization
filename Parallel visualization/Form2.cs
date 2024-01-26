@@ -18,77 +18,154 @@ namespace Parallel_visualization
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void Form2_Paint(object sender, PaintEventArgs e)
         {
+            //Graphics g = e.Graphics;
+            //g.FillEllipse(red, kor);
+            Graphics g = pictureBox2.CreateGraphics();
+            // Rajzolas...                     
+
+
+
+
 
         }
 
-        void merge(int[] arr, int l, int m, int r)
+        private void Form2_Load(object sender, EventArgs e)
         {
-            // Find sizes of two
-            // subarrays to be merged
-            int n1 = m - l + 1;
-            int n2 = r - m;
+            //this.DoubleBuffered = true;
+        }
 
-            // Create temp arrays
-            int[] L = new int[n1];
-            int[] R = new int[n2];
-            int i, j;
+        void SequentialMergeSort(int[] array)
+        {
+            if (array.Length <= 1)
+                return;
 
-            // Copy data to temp arrays
-            for (i = 0; i < n1; ++i)
-                L[i] = arr[l + i];
-            for (j = 0; j < n2; ++j)
-                R[j] = arr[m + 1 + j];
+            int middle = array.Length / 2;
 
-            // Merge the temp arrays
+            int[] leftArray = new int[middle];
+            int[] rightArray = new int[array.Length - middle];
 
-            // Initial indexes of first
-            // and second subarrays
-            i = 0;
-            j = 0;
+            Array.Copy(array, 0, leftArray, 0, middle);
+            Array.Copy(array, middle, rightArray, 0, array.Length - middle);
 
-            // Initial index of merged
-            // subarray array
-            int k = l;
-            while (i < n1 && j < n2)
+            SequentialMergeSort(leftArray);
+            SequentialMergeSort(rightArray);
+
+            Merge(array, leftArray, rightArray);
+
+            Graphics g = pictureBox1.CreateGraphics();
+            SolidBrush redBrush = new SolidBrush(Color.Red);
+
+            Rectangle rect = new Rectangle(0, 0, pictureBox1.Width, pictureBox1.Height);
+
+            // Fill rectangle to screen.
+            g.FillRectangle(new SolidBrush(Color.White), rect);
+            for (int i = 0; i < array.Length; i++)
             {
-                if (L[i] <= R[j])
-                {
-                    arr[k] = L[i];
-                    i++;
-                }
-                else
-                {
-                    arr[k] = R[j];
-                    j++;
-                }
-                k++;
+
+
+                // Create rectangle for ellipse.
+                int x = i + 10;
+                int y = pictureBox1.Height - array[i] * 10;
+                int width = 10;
+                int height = pictureBox1.Height;
+                Rectangle rect2 = new Rectangle(x, y, width, height);
+
+                // Fill ellipse on screen.
+                g.FillRectangle(redBrush, rect2);
             }
 
-            // Copy remaining elements
-            // of L[] if any
-            while (i < n1)
-            {
-                arr[k] = L[i];
-                i++;
-                k++;
-            }
-
-            // Copy remaining elements
-            // of R[] if any
-            while (j < n2)
-            {
-                arr[k] = R[j];
-                j++;
-                k++;
-            }
         }
 
         // Main function that
         // sorts arr[l..r] using
         // merge()
-        void sort(int[] arr, int l, int r)
+        Graphics g;
+
+        void ParallelMergeSort(int[] array)
+        {
+            if (array.Length <= 1)
+                return;
+
+            int middle = array.Length / 2;
+
+            int[] leftArray = new int[middle];
+            int[] rightArray = new int[array.Length - middle];
+
+            Array.Copy(array, 0, leftArray, 0, middle);
+            Array.Copy(array, middle, rightArray, 0, array.Length - middle);
+
+            Task leftTask = Task.Run(() => ParallelMergeSort(leftArray));
+            Task rightTask = Task.Run(() => ParallelMergeSort(rightArray));
+
+            Task.WaitAll(leftTask, rightTask);
+
+            Merge(array, leftArray, rightArray);
+
+
+            Graphics g = pictureBox2.CreateGraphics();
+            SolidBrush redBrush = new SolidBrush(Color.Red);
+
+            Rectangle rect = new Rectangle(0, 0, pictureBox1.Width, pictureBox1.Height);
+
+            // Fill rectangle to screen.
+            g.FillRectangle(new SolidBrush(Color.White), rect);
+            for (int i = 0; i < array.Length; i++)
+            {
+
+
+                // Create rectangle for ellipse.
+                int x = i + 10;
+                int y = pictureBox1.Height - array[i] * 10;
+                int width = 10;
+                int height = pictureBox1.Height;
+                Rectangle rect2 = new Rectangle(x, y, width, height);
+
+                // Fill ellipse on screen.
+                g.FillRectangle(redBrush, rect2);
+            }
+
+        }
+
+        void Merge(int[] array, int[] leftArray, int[] rightArray)
+        {
+
+            int leftIndex = 0, rightIndex = 0, index = 0;
+
+            while (leftIndex < leftArray.Length && rightIndex < rightArray.Length)
+            {
+                if (leftArray[leftIndex] < rightArray[rightIndex])
+                {
+                    array[index++] = leftArray[leftIndex++];
+                }
+                else
+                {
+                    array[index++] = rightArray[rightIndex++];
+                }
+
+
+
+
+
+
+            }
+
+            while (leftIndex < leftArray.Length)
+            {
+
+                array[index++] = leftArray[leftIndex++];
+
+            }
+
+            while (rightIndex < rightArray.Length)
+            {
+                array[index++] = rightArray[rightIndex++];
+
+            }
+        }
+
+        /*void sort(int[] arr, int l, int r)
         {
             var watch = Stopwatch.StartNew();
             // something to time
@@ -113,22 +190,85 @@ namespace Parallel_visualization
             }
             watch.Stop();
 
-        }
+        }*/
+
+
+
         private void button1_Click(object sender, EventArgs e)
         {
-            int Min = 0;
-            int Max = 20;
-
-            int[] arr = new int[10000];
-            Random randNum = new Random();
-            foreach (int value in arr)
-            {
-                randNum.Next(Min, Max);
-            }
-            new Thread(() =>
+            arrorig.CopyTo(arr, 0);
+            Stopwatch stopwatch = Stopwatch.StartNew();
+            SequentialMergeSort(arr);
+            stopwatch.Stop();
+            label1.Text = "time: " + (double)stopwatch.ElapsedMilliseconds / 1000;
+            /*new Thread(() =>
             {
                 sort(arr, 0, arr.Length - 1);
-            }).Start();
+            }).Start();*/
+
+
+
+        }
+
+        private int Min;
+        private int Max;
+        private int[] arrorig;
+        private int[] arr;
+        private void button2_Click(object sender, EventArgs e)
+        {
+            arrorig.CopyTo(arr, 0);
+
+
+
+            Stopwatch stopwatch = Stopwatch.StartNew();
+            ParallelMergeSort(arr);
+            stopwatch.Stop();
+            label2.Text = "time: " + (double)stopwatch.ElapsedMilliseconds / 1000;
+
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            Min = Convert.ToInt32(numericUpDown1.Value);
+            Max = Convert.ToInt32(numericUpDown2.Value);
+
+            arr = new int[Convert.ToInt32(numericUpDown3.Value)];
+            arrorig = new int[Convert.ToInt32(numericUpDown3.Value)];
+
+            Graphics g = pictureBox1.CreateGraphics();
+            SolidBrush redBrush = new SolidBrush(Color.Red);
+
+            Rectangle rect = new Rectangle(0, 0, pictureBox1.Width, pictureBox1.Height);
+
+            // Fill rectangle to screen.
+            g.FillRectangle(new SolidBrush(Color.White), rect);
+
+            Random randNum = new Random();
+            for (int i = 0; i < arrorig.Length; i++)
+            {
+                arrorig[i] = randNum.Next(Min, Max);
+                //Debug.WriteLine(arr[i]);
+
+                // Create rectangle for ellipse.
+                int x = i + 10;
+                int y = pictureBox1.Height - arrorig[i] * 10;
+                int width = 10;
+                int height = pictureBox1.Height;
+                Rectangle rect2 = new Rectangle(x, y, width, height);
+
+                // Fill ellipse on screen.
+                g.FillRectangle(redBrush, rect2);
+
+            }
+
+
+
+
+
+
+
         }
     }
 }
