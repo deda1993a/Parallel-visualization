@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Linq;
@@ -34,8 +35,12 @@ namespace Parallel_visualization
         private void button2_Click(object sender, EventArgs e)
         {
             NeImage = OgImage;
+            Stopwatch stopwatch = Stopwatch.StartNew();
+
             OutputB = SequenErode(NeImage);
-            pictureBox2.Image = OutputB;
+            stopwatch.Stop();
+            pictureBox1.Image = OutputB;
+            label1.Text = "time: " + (double)stopwatch.ElapsedMilliseconds / 1000;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -47,7 +52,14 @@ namespace Parallel_visualization
         {
             NeImage = OgImage;
 
+            Stopwatch stopwatch = Stopwatch.StartNew();
+
             OutputB = Erode(NeImage);
+            stopwatch.Stop();
+            pictureBox2.Image = OutputB;
+            label2.Text = "time: " + (double)stopwatch.ElapsedMilliseconds / 1000;
+
+            
             pictureBox2.Image = OutputB;
 
         }
