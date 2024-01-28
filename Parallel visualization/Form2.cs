@@ -83,6 +83,8 @@ namespace Parallel_visualization
         // merge()
         Graphics g;
 
+        int pchange = 0;
+        int schange = 0;
         void ParallelMergeSort(int[] array)
         {
             if (array.Length <= 1)
@@ -96,13 +98,15 @@ namespace Parallel_visualization
             Array.Copy(array, 0, leftArray, 0, middle);
             Array.Copy(array, middle, rightArray, 0, array.Length - middle);
 
-            Task leftTask = Task.Run(() => ParallelMergeSort(leftArray));
-            Task rightTask = Task.Run(() => ParallelMergeSort(rightArray));
+            Parallel.Invoke(
+                () => ParallelMergeSort(leftArray),
+                () => ParallelMergeSort(rightArray)
+            );
 
-            Task.WaitAll(leftTask, rightTask);
-
-            Merge(array, leftArray, rightArray);
-
+            Parallel.Invoke(
+                () => Merge(array, leftArray, rightArray),
+                () => Merge(array, leftArray, rightArray)  // Perform merging twice in parallel
+            );
 
             Graphics g = pictureBox2.CreateGraphics();
             SolidBrush redBrush = new SolidBrush(Color.Red);
@@ -125,7 +129,6 @@ namespace Parallel_visualization
                 // Fill ellipse on screen.
                 g.FillRectangle(redBrush, rect2);
             }
-
         }
 
         void Merge(int[] array, int[] leftArray, int[] rightArray)
@@ -138,6 +141,8 @@ namespace Parallel_visualization
                 if (leftArray[leftIndex] < rightArray[rightIndex])
                 {
                     array[index++] = leftArray[leftIndex++];
+                    pchange++;
+                    schange++;
                 }
                 else
                 {
@@ -201,6 +206,7 @@ namespace Parallel_visualization
             SequentialMergeSort(arr);
             stopwatch.Stop();
             label1.Text = "time: " + (double)stopwatch.ElapsedMilliseconds / 1000;
+            label5.Text = schange.ToString() + " csere történt";
             /*new Thread(() =>
             {
                 sort(arr, 0, arr.Length - 1);
@@ -224,7 +230,7 @@ namespace Parallel_visualization
             ParallelMergeSort(arr);
             stopwatch.Stop();
             label2.Text = "time: " + (double)stopwatch.ElapsedMilliseconds / 1000;
-
+            label6.Text = pchange.ToString() + " történt";
 
         }
 

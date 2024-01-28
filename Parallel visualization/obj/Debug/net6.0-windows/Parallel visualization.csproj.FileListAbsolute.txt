@@ -34,3 +34,6 @@ C:\Users\demet\Source\Repos\Parallel-visualization2024v1\Parallel visualization\
 C:\Users\demet\Source\Repos\Parallel-visualization2024v1\Parallel visualization\obj\Debug\net6.0-windows\Parallel visualization.pdb
 C:\Users\demet\Source\Repos\Parallel-visualization2024v1\Parallel visualization\obj\Debug\net6.0-windows\Parallel visualization.genruntimeconfig.cache
 C:\Users\demet\Source\Repos\Parallel-visualization2024v1\Parallel visualization\obj\Debug\net6.0-windows\ref\Parallel visualization.dll
+C:\Users\demet\source\repos\Parallel-visualization2024v1\Parallel visualization\obj\Debug\net6.0-windows\Parallel_visualization.Form3.resources
+C:\Users\demet\source\repos\Parallel-visualization2024v1\Parallel visualization\obj\Debug\net6.0-windows\Parallel_visualization.Form4.resources
+C:\Users\demet\source\repos\Parallel-visualization2024v1\Parallel visualization\obj\Debug\net6.0-windows\Parallel_visualization.Form5.resources

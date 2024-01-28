@@ -32,6 +32,9 @@
             fájlToolStripMenuItem = new ToolStripMenuItem();
             mergeSortToolStripMenuItem = new ToolStripMenuItem();
             imageToolStripMenuItem = new ToolStripMenuItem();
+            grayscaleToolStripMenuItem = new ToolStripMenuItem();
+            erosionToolStripMenuItem = new ToolStripMenuItem();
+            grahamScanForConvexHullToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -46,7 +49,7 @@
             // 
             // fájlToolStripMenuItem
             // 
-            fájlToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mergeSortToolStripMenuItem, imageToolStripMenuItem });
+            fájlToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mergeSortToolStripMenuItem, imageToolStripMenuItem, grayscaleToolStripMenuItem, erosionToolStripMenuItem, grahamScanForConvexHullToolStripMenuItem });
             fájlToolStripMenuItem.Name = "fájlToolStripMenuItem";
             fájlToolStripMenuItem.Size = new Size(37, 20);
             fájlToolStripMenuItem.Text = "Fájl";
@@ -54,15 +57,36 @@
             // mergeSortToolStripMenuItem
             // 
             mergeSortToolStripMenuItem.Name = "mergeSortToolStripMenuItem";
-            mergeSortToolStripMenuItem.Size = new Size(180, 22);
+            mergeSortToolStripMenuItem.Size = new Size(229, 22);
             mergeSortToolStripMenuItem.Text = "Merge Sort";
             mergeSortToolStripMenuItem.Click += mergeSortToolStripMenuItem_Click;
             // 
             // imageToolStripMenuItem
             // 
             imageToolStripMenuItem.Name = "imageToolStripMenuItem";
-            imageToolStripMenuItem.Size = new Size(180, 22);
+            imageToolStripMenuItem.Size = new Size(229, 22);
             imageToolStripMenuItem.Text = "Image";
+            // 
+            // grayscaleToolStripMenuItem
+            // 
+            grayscaleToolStripMenuItem.Name = "grayscaleToolStripMenuItem";
+            grayscaleToolStripMenuItem.Size = new Size(229, 22);
+            grayscaleToolStripMenuItem.Text = "Grayscale";
+            grayscaleToolStripMenuItem.Click += grayscaleToolStripMenuItem_Click;
+            // 
+            // erosionToolStripMenuItem
+            // 
+            erosionToolStripMenuItem.Name = "erosionToolStripMenuItem";
+            erosionToolStripMenuItem.Size = new Size(229, 22);
+            erosionToolStripMenuItem.Text = "Erosion";
+            erosionToolStripMenuItem.Click += erosionToolStripMenuItem_Click;
+            // 
+            // grahamScanForConvexHullToolStripMenuItem
+            // 
+            grahamScanForConvexHullToolStripMenuItem.Name = "grahamScanForConvexHullToolStripMenuItem";
+            grahamScanForConvexHullToolStripMenuItem.Size = new Size(229, 22);
+            grahamScanForConvexHullToolStripMenuItem.Text = "Graham scan for Convex Hull";
+            grahamScanForConvexHullToolStripMenuItem.Click += grahamScanForConvexHullToolStripMenuItem_Click;
             // 
             // Form1
             // 
@@ -85,5 +109,8 @@
         private ToolStripMenuItem fájlToolStripMenuItem;
         private ToolStripMenuItem mergeSortToolStripMenuItem;
         private ToolStripMenuItem imageToolStripMenuItem;
+        private ToolStripMenuItem grayscaleToolStripMenuItem;
+        private ToolStripMenuItem erosionToolStripMenuItem;
+        private ToolStripMenuItem grahamScanForConvexHullToolStripMenuItem;
     }
 }

@@ -40,11 +40,17 @@
             numericUpDown3 = new NumericUpDown();
             label4 = new Label();
             button3 = new Button();
+            pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            label5 = new Label();
+            label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -87,7 +93,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(36, 104);
+            pictureBox1.Location = new Point(36, 159);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(340, 308);
             pictureBox1.TabIndex = 4;
@@ -95,7 +101,7 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.Location = new Point(399, 104);
+            pictureBox2.Location = new Point(399, 159);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(362, 308);
             pictureBox2.TabIndex = 5;
@@ -154,11 +160,49 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.Location = new Point(52, 487);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(324, 158);
+            pictureBox3.TabIndex = 12;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Location = new Point(415, 487);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(324, 158);
+            pictureBox4.TabIndex = 13;
+            pictureBox4.TabStop = false;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(45, 128);
+            label5.Name = "label5";
+            label5.Size = new Size(38, 15);
+            label5.TabIndex = 14;
+            label5.Text = "label5";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(408, 119);
+            label6.Name = "label6";
+            label6.Size = new Size(38, 15);
+            label6.TabIndex = 15;
+            label6.Text = "label6";
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(794, 765);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(pictureBox4);
+            Controls.Add(pictureBox3);
             Controls.Add(button3);
             Controls.Add(label4);
             Controls.Add(numericUpDown3);
@@ -172,13 +216,15 @@
             Controls.Add(label1);
             Controls.Add(button1);
             Name = "Form2";
-            Text = "Form2";
+            Text = "Merge Sort";
             Load += Form2_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -197,5 +243,9 @@
         private NumericUpDown numericUpDown3;
         private Label label4;
         private Button button3;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
+        private Label label5;
+        private Label label6;
     }
 }
