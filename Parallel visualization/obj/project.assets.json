@@ -13,18 +13,18 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\demet\\Source\\Repos\\Parallel-visualization-01.28\\Parallel visualization\\Parallel visualization.csproj",
+      "projectUniqueName": "C:\\Users\\demet\\Source\\Repos\\Parallel-visualization02.21\\Parallel visualization\\Parallel visualization.csproj",
       "projectName": "Parallel visualization",
-      "projectPath": "C:\\Users\\demet\\Source\\Repos\\Parallel-visualization-01.28\\Parallel visualization\\Parallel visualization.csproj",
+      "projectPath": "C:\\Users\\demet\\Source\\Repos\\Parallel-visualization02.21\\Parallel visualization\\Parallel visualization.csproj",
       "packagesPath": "C:\\Users\\demet\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\demet\\Source\\Repos\\Parallel-visualization-01.28\\Parallel visualization\\obj\\",
+      "outputPath": "C:\\Users\\demet\\Source\\Repos\\Parallel-visualization02.21\\Parallel visualization\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\demet\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows7.0"
+        "net6.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -51,7 +51,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -63,7 +64,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }
