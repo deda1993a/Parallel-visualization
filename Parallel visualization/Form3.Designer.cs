@@ -28,159 +28,173 @@
         /// </summary>
         private void InitializeComponent()
         {
-            openFileDialog1 = new OpenFileDialog();
-            textBox1 = new TextBox();
-            button1 = new Button();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            button2 = new Button();
-            button3 = new Button();
-            label1 = new Label();
-            label2 = new Label();
-            textBox2 = new TextBox();
-            button4 = new Button();
-            folderBrowserDialog1 = new FolderBrowserDialog();
-            button5 = new Button();
-            button6 = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            SuspendLayout();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.SuspendLayout();
             // 
             // openFileDialog1
             // 
-            openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(43, 12);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 0;
+            this.textBox1.Location = new System.Drawing.Point(49, 16);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(114, 27);
+            this.textBox1.TabIndex = 0;
             // 
             // button1
             // 
-            button1.Location = new Point(149, 11);
-            button1.Name = "button1";
-            button1.Size = new Size(95, 23);
-            button1.TabIndex = 1;
-            button1.Text = "Kép beolvasás";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            this.button1.Location = new System.Drawing.Point(170, 15);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(154, 31);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Kép beolvasás";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(29, 88);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(284, 232);
-            pictureBox1.TabIndex = 2;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.Location = new System.Drawing.Point(33, 117);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(325, 309);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            pictureBox2.Location = new Point(449, 90);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(306, 230);
-            pictureBox2.TabIndex = 3;
-            pictureBox2.TabStop = false;
+            this.pictureBox2.Location = new System.Drawing.Point(513, 120);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(350, 307);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
             // 
             // button2
             // 
-            button2.Location = new Point(43, 47);
-            button2.Name = "button2";
-            button2.Size = new Size(149, 23);
-            button2.TabIndex = 4;
-            button2.Text = "Szekvenciális egy képen";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            this.button2.Location = new System.Drawing.Point(49, 63);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(170, 31);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Szekvenciális egy képen";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            button3.Location = new Point(438, 43);
-            button3.Name = "button3";
-            button3.Size = new Size(145, 23);
-            button3.TabIndex = 5;
-            button3.Text = "Párhuzamos egy képen";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            this.button3.Location = new System.Drawing.Point(501, 57);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(166, 31);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Párhuzamos egy képen";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(364, 55);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 6;
-            label1.Text = "label1";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(416, 73);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 20);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "label1";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(745, 51);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 7;
-            label2.Text = "label2";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(851, 68);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 20);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "label2";
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(438, 11);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 8;
+            this.textBox2.Location = new System.Drawing.Point(501, 15);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(114, 27);
+            this.textBox2.TabIndex = 8;
             // 
             // button4
             // 
-            button4.Location = new Point(544, 11);
-            button4.Name = "button4";
-            button4.Size = new Size(195, 23);
-            button4.TabIndex = 9;
-            button4.Text = "Képeknek való mappa megadása";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            this.button4.Location = new System.Drawing.Point(622, 15);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(223, 31);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "Képeknek való mappa megadása";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            button5.Location = new Point(198, 47);
-            button5.Name = "button5";
-            button5.Size = new Size(163, 23);
-            button5.TabIndex = 10;
-            button5.Text = "Szekvenciális több képen";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
+            this.button5.Location = new System.Drawing.Point(226, 63);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(186, 31);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "Szekvenciális több képen";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
-            button6.Location = new Point(589, 43);
-            button6.Name = "button6";
-            button6.Size = new Size(150, 23);
-            button6.TabIndex = 11;
-            button6.Text = "Párhuzamos több képen";
-            button6.UseVisualStyleBackColor = true;
-            button6.Click += button6_Click;
+            this.button6.Location = new System.Drawing.Point(673, 57);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(171, 31);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "Párhuzamos több képen";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Form3
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(826, 450);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(textBox2);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
-            Controls.Add(button1);
-            Controls.Add(textBox1);
-            Name = "Form3";
-            Text = "Grayscale";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(944, 600);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "Form3";
+            this.Text = "Grayscale";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

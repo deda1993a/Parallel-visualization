@@ -28,159 +28,172 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            label1 = new Label();
-            label2 = new Label();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            openFileDialog1 = new OpenFileDialog();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            SuspendLayout();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.SuspendLayout();
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(32, 15);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 0;
+            this.textBox1.Location = new System.Drawing.Point(37, 20);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(114, 27);
+            this.textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(475, 15);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 1;
+            this.textBox2.Location = new System.Drawing.Point(543, 20);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(114, 27);
+            this.textBox2.TabIndex = 1;
             // 
             // button1
             // 
-            button1.Location = new Point(138, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(114, 23);
-            button1.TabIndex = 2;
-            button1.Text = "Kép beolvasás";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            this.button1.Location = new System.Drawing.Point(158, 16);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 31);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Kép beolvasás";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            button2.Location = new Point(32, 60);
-            button2.Name = "button2";
-            button2.Size = new Size(158, 23);
-            button2.TabIndex = 3;
-            button2.Text = "Szekvenciális egy képen";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            this.button2.Location = new System.Drawing.Point(37, 80);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(181, 31);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Szekvenciális egy képen";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            button3.Location = new Point(475, 57);
-            button3.Name = "button3";
-            button3.Size = new Size(151, 23);
-            button3.TabIndex = 4;
-            button3.Text = "Párhuzamos egy képen";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            this.button3.Location = new System.Drawing.Point(543, 76);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(173, 31);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Párhuzamos egy képen";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            button4.Location = new Point(581, 16);
-            button4.Name = "button4";
-            button4.Size = new Size(200, 23);
-            button4.TabIndex = 5;
-            button4.Text = "Képeknek való mappa megadása";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            this.button4.Location = new System.Drawing.Point(664, 21);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(229, 31);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "Képeknek való mappa megadása";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            button5.Location = new Point(196, 61);
-            button5.Name = "button5";
-            button5.Size = new Size(148, 23);
-            button5.TabIndex = 6;
-            button5.Text = "Szekvenciális több képen";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
+            this.button5.Location = new System.Drawing.Point(224, 81);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(169, 31);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "Szekvenciális több képen";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
-            button6.Location = new Point(632, 61);
-            button6.Name = "button6";
-            button6.Size = new Size(161, 23);
-            button6.TabIndex = 7;
-            button6.Text = "Párhuzamos több képen";
-            button6.UseVisualStyleBackColor = true;
-            button6.Click += button6_Click;
+            this.button6.Location = new System.Drawing.Point(722, 81);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(184, 31);
+            this.button6.TabIndex = 7;
+            this.button6.Text = "Párhuzamos több képen";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(346, 65);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 8;
-            label1.Text = "label1";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(395, 87);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 20);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "label1";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(799, 68);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 9;
-            label2.Text = "label2";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(913, 91);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 20);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "label2";
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(73, 169);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(287, 235);
-            pictureBox1.TabIndex = 10;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.Location = new System.Drawing.Point(83, 225);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(328, 313);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            pictureBox2.Location = new Point(501, 169);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(280, 235);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 11;
-            pictureBox2.TabStop = false;
+            this.pictureBox2.Location = new System.Drawing.Point(573, 225);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(320, 313);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
             // 
             // openFileDialog1
             // 
-            openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form4
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(871, 436);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Name = "Form4";
-            Text = "Morphological erosion";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(995, 581);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "Form4";
+            this.Text = "Morphological erosion";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

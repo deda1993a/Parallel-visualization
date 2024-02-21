@@ -26,11 +26,6 @@ namespace Parallel_visualization
             Form3.Show();
         }
 
-        private void erózióToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void grahamScanForConvexHullToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form Form5 = new Form5();
@@ -45,6 +40,14 @@ namespace Parallel_visualization
 
 
             Form4.Show();
+        }
+
+        private void mandelbrotSetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form Form6 = new Form6();
+
+
+            Form6.Show();
         }
     }
 }

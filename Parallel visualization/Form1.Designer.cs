@@ -28,79 +28,90 @@
         /// </summary>
         private void InitializeComponent()
         {
-            menuStrip1 = new MenuStrip();
-            fájlToolStripMenuItem = new ToolStripMenuItem();
-            mergeSortToolStripMenuItem = new ToolStripMenuItem();
-            imageToolStripMenuItem = new ToolStripMenuItem();
-            grayscaleToolStripMenuItem = new ToolStripMenuItem();
-            erosionToolStripMenuItem = new ToolStripMenuItem();
-            grahamScanForConvexHullToolStripMenuItem = new ToolStripMenuItem();
-            menuStrip1.SuspendLayout();
-            SuspendLayout();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fájlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mergeSortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grayscaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.erosionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grahamScanForConvexHullToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mandelbrotSetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fájlToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 24);
-            menuStrip1.TabIndex = 1;
-            menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fájlToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(914, 30);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
             // 
             // fájlToolStripMenuItem
             // 
-            fájlToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mergeSortToolStripMenuItem, imageToolStripMenuItem, grayscaleToolStripMenuItem, erosionToolStripMenuItem, grahamScanForConvexHullToolStripMenuItem });
-            fájlToolStripMenuItem.Name = "fájlToolStripMenuItem";
-            fájlToolStripMenuItem.Size = new Size(37, 20);
-            fájlToolStripMenuItem.Text = "Fájl";
+            this.fájlToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mergeSortToolStripMenuItem,
+            this.grayscaleToolStripMenuItem,
+            this.erosionToolStripMenuItem,
+            this.grahamScanForConvexHullToolStripMenuItem,
+            this.mandelbrotSetToolStripMenuItem});
+            this.fájlToolStripMenuItem.Name = "fájlToolStripMenuItem";
+            this.fájlToolStripMenuItem.Size = new System.Drawing.Size(45, 24);
+            this.fájlToolStripMenuItem.Text = "Fájl";
             // 
             // mergeSortToolStripMenuItem
             // 
-            mergeSortToolStripMenuItem.Name = "mergeSortToolStripMenuItem";
-            mergeSortToolStripMenuItem.Size = new Size(229, 22);
-            mergeSortToolStripMenuItem.Text = "Merge Sort";
-            mergeSortToolStripMenuItem.Click += mergeSortToolStripMenuItem_Click;
-            // 
-            // imageToolStripMenuItem
-            // 
-            imageToolStripMenuItem.Name = "imageToolStripMenuItem";
-            imageToolStripMenuItem.Size = new Size(229, 22);
-            imageToolStripMenuItem.Text = "Image";
+            this.mergeSortToolStripMenuItem.Name = "mergeSortToolStripMenuItem";
+            this.mergeSortToolStripMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.mergeSortToolStripMenuItem.Text = "Merge Sort";
+            this.mergeSortToolStripMenuItem.Click += new System.EventHandler(this.mergeSortToolStripMenuItem_Click);
             // 
             // grayscaleToolStripMenuItem
             // 
-            grayscaleToolStripMenuItem.Name = "grayscaleToolStripMenuItem";
-            grayscaleToolStripMenuItem.Size = new Size(229, 22);
-            grayscaleToolStripMenuItem.Text = "Grayscale";
-            grayscaleToolStripMenuItem.Click += grayscaleToolStripMenuItem_Click;
+            this.grayscaleToolStripMenuItem.Name = "grayscaleToolStripMenuItem";
+            this.grayscaleToolStripMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.grayscaleToolStripMenuItem.Text = "Grayscale";
+            this.grayscaleToolStripMenuItem.Click += new System.EventHandler(this.grayscaleToolStripMenuItem_Click);
             // 
             // erosionToolStripMenuItem
             // 
-            erosionToolStripMenuItem.Name = "erosionToolStripMenuItem";
-            erosionToolStripMenuItem.Size = new Size(229, 22);
-            erosionToolStripMenuItem.Text = "Erosion";
-            erosionToolStripMenuItem.Click += erosionToolStripMenuItem_Click;
+            this.erosionToolStripMenuItem.Name = "erosionToolStripMenuItem";
+            this.erosionToolStripMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.erosionToolStripMenuItem.Text = "Erosion";
+            this.erosionToolStripMenuItem.Click += new System.EventHandler(this.erosionToolStripMenuItem_Click);
             // 
             // grahamScanForConvexHullToolStripMenuItem
             // 
-            grahamScanForConvexHullToolStripMenuItem.Name = "grahamScanForConvexHullToolStripMenuItem";
-            grahamScanForConvexHullToolStripMenuItem.Size = new Size(229, 22);
-            grahamScanForConvexHullToolStripMenuItem.Text = "Graham scan for Convex Hull";
-            grahamScanForConvexHullToolStripMenuItem.Click += grahamScanForConvexHullToolStripMenuItem_Click;
+            this.grahamScanForConvexHullToolStripMenuItem.Name = "grahamScanForConvexHullToolStripMenuItem";
+            this.grahamScanForConvexHullToolStripMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.grahamScanForConvexHullToolStripMenuItem.Text = "Graham scan for Convex Hull";
+            this.grahamScanForConvexHullToolStripMenuItem.Click += new System.EventHandler(this.grahamScanForConvexHullToolStripMenuItem_Click);
+            // 
+            // mandelbrotSetToolStripMenuItem
+            // 
+            this.mandelbrotSetToolStripMenuItem.Name = "mandelbrotSetToolStripMenuItem";
+            this.mandelbrotSetToolStripMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.mandelbrotSetToolStripMenuItem.Text = "Mandelbrot set";
+            this.mandelbrotSetToolStripMenuItem.Click += new System.EventHandler(this.mandelbrotSetToolStripMenuItem_Click);
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(menuStrip1);
-            MainMenuStrip = menuStrip1;
-            Name = "Form1";
-            Text = "Form1";
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -108,9 +119,9 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem fájlToolStripMenuItem;
         private ToolStripMenuItem mergeSortToolStripMenuItem;
-        private ToolStripMenuItem imageToolStripMenuItem;
         private ToolStripMenuItem grayscaleToolStripMenuItem;
         private ToolStripMenuItem erosionToolStripMenuItem;
         private ToolStripMenuItem grahamScanForConvexHullToolStripMenuItem;
+        private ToolStripMenuItem mandelbrotSetToolStripMenuItem;
     }
 }

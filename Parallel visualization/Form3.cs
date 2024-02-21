@@ -87,7 +87,7 @@ namespace Parallel_visualization
                 {
                     Process currentProc = Process.GetCurrentProcess();
                     long memory = currentProc.PrivateMemorySize64;
-                    Debug.WriteLine(memory);
+                    //Debug.WriteLine(memory);
                     byte* currentLine = ptrFirstPixel + (y * bitmapData.Stride);
                     for (int x = 0; x < widthInBytes; x = x + bytesPerPixel)
                     {
