@@ -108,7 +108,7 @@ namespace Parallel_visualization
             }
         }
 
-
+        //gthtz
         private void button2_Click(object sender, EventArgs e)
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
