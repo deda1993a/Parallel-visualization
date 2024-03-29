@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\demet\\Source\\Repos\\Parallel-visualization02.21\\Parallel visualization\\Parallel visualization.csproj",
+      "projectUniqueName": "C:\\Users\\demet\\Source\\Repos\\Parallel-visualization03.29\\Parallel visualization\\Parallel visualization.csproj",
       "projectName": "Parallel visualization",
-      "projectPath": "C:\\Users\\demet\\Source\\Repos\\Parallel-visualization02.21\\Parallel visualization\\Parallel visualization.csproj",
+      "projectPath": "C:\\Users\\demet\\Source\\Repos\\Parallel-visualization03.29\\Parallel visualization\\Parallel visualization.csproj",
       "packagesPath": "C:\\Users\\demet\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\demet\\Source\\Repos\\Parallel-visualization02.21\\Parallel visualization\\obj\\",
+      "outputPath": "C:\\Users\\demet\\Source\\Repos\\Parallel-visualization03.29\\Parallel visualization\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\demet\\AppData\\Roaming\\NuGet\\NuGet.Config",

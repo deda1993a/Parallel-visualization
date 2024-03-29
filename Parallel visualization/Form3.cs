@@ -27,13 +27,13 @@ namespace Parallel_visualization
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
             NeImage = OgImage;
-            Grayscale(NeImage);
+            ParGrayscale(NeImage);
             stopwatch.Stop();
             label2.Text = "time: " + (double)stopwatch.ElapsedMilliseconds / 1000;
 
         }
 
-        private void Grayscale(Bitmap pic)
+        private void ParGrayscale(Bitmap pic)
         {
             unsafe
             {
@@ -153,7 +153,7 @@ namespace Parallel_visualization
                 NeImage = new Bitmap(selected);
 
 
-                SeqGrayscale(NeImage);
+                ParGrayscale(NeImage);
 
 
 
