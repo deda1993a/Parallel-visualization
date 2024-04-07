@@ -24,12 +24,13 @@ namespace Parallel_visualization
 
         }
 
-        private const int MaxIterations = 100;
+        private int MaxIterations;
         private static object bitmapLock = new object();
 
 
-        public static Bitmap Generate(int width, int height)
+        public Bitmap Generate(int width, int height, int MaxIterations)
         {
+
             Bitmap image = new Bitmap(width, height);
             double xMin = -2.5;
             double xMax = 1;
@@ -69,8 +70,9 @@ namespace Parallel_visualization
         }
 
 
-        public static Bitmap SeqGenerate(int width, int height)
+        public Bitmap SeqGenerate(int width, int height)
         {
+            MaxIterations = (int)numericUpDown1.Value;
             Bitmap image = new Bitmap(width, height);
             double xMin = -2.5;
             double xMax = 1;
@@ -119,7 +121,7 @@ namespace Parallel_visualization
         private void button1_Click(object sender, EventArgs e)
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
-            Bitmap imagenew= Generate(800, 800);
+            Bitmap imagenew = Generate(800, 800, (int)numericUpDown1.Value);
             stopwatch.Stop();
             pictureBox1.Image = imagenew;
             label2.Text = "time: " + (double)stopwatch.ElapsedMilliseconds / 1000;
@@ -133,8 +135,19 @@ namespace Parallel_visualization
             pictureBox2.Image = imagenew2;
 
             label1.Text = "time: " + (double)stopwatch.ElapsedMilliseconds / 1000;
-          
 
+
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+            Stopwatch stopwatch = Stopwatch.StartNew();
+
+            Bitmap imagenew2 = Generate(800, 800, (int)numericUpDown2.Value);
+            stopwatch.Stop();
+            pictureBox2.Image = imagenew2;
+
+            label1.Text = "time: " + (double)stopwatch.ElapsedMilliseconds / 1000;
         }
     }
 }
