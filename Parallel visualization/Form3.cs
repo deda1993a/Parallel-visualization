@@ -48,10 +48,6 @@ namespace Parallel_visualization
                     byte* currentLine = PtrFirstPixel + (y * bitmapData.Stride);
                     for (int x = 0; x < widthInBytes; x = x + bytesPerPixel)
                     {
-                        //Color pixelColor = temp.GetPixel(x, y);
-                        //Color black = Color.FromArgb(0, 0, 0);
-                        //Color white = Color.FromArgb(255, 255, 255);
-
                         int oldBlue = currentLine[x];
                         int oldGreen = currentLine[x + 1];
                         int oldRed = currentLine[x + 2];
@@ -61,7 +57,6 @@ namespace Parallel_visualization
                         currentLine[x] = (byte)CValue;
                         currentLine[x + 1] = (byte)CValue;
                         currentLine[x + 2] = (byte)CValue;
-
 
                     }
                 });
@@ -85,9 +80,6 @@ namespace Parallel_visualization
 
                 for (int y = 0; y < heightInPixels; y++)
                 {
-                    Process currentProc = Process.GetCurrentProcess();
-                    long memory = currentProc.PrivateMemorySize64;
-                    //Debug.WriteLine(memory);
                     byte* currentLine = ptrFirstPixel + (y * bitmapData.Stride);
                     for (int x = 0; x < widthInBytes; x = x + bytesPerPixel)
                     {
@@ -97,7 +89,6 @@ namespace Parallel_visualization
 
                         int CValue = (oldRed + oldGreen + oldBlue) / 3;
 
-                        // calculate new pixel value
                         currentLine[x] = (byte)CValue;
                         currentLine[x + 1] = (byte)CValue;
                         currentLine[x + 2] = (byte)CValue;
