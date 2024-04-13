@@ -112,6 +112,7 @@ namespace Parallel_visualization
                 MergeSortSequential(arrParallel, low, mid, ref changes);
                 MergeSortSequential(arrParallel, mid + 1, high, ref changes);
                 changes += Merge(arrParallel, low, mid, high);
+                Debug.WriteLine("Ch: "+changes);
                 allParChange += changes;
                 threadCount.Add(changes);
                 // textBox1.AppendText("A " + Thread.CurrentThread.ManagedThreadId + " nevű szál: " + changes + "cserát hajtott végre\r\n");
@@ -189,8 +190,8 @@ namespace Parallel_visualization
                 int y = pictureBox1.Height - arrSequential[i] * 10;
                 int width = 10;
                 int height = pictureBox1.Height;
-                Rectangle rect2 = new Rectangle(x / widthScale, y, width / widthScale, height);
-
+                Rectangle rect2 = new Rectangle((x / widthScale)+1, y, width / widthScale, height);
+                
                 // Fill ellipse on screen.
                 g.FillRectangle(redBrush, rect2);
 
@@ -254,6 +255,7 @@ namespace Parallel_visualization
 
             }
             label2.Text = allParChange + " csere történt";
+            //Debug.WriteLine(allParChange);
             label6.Text = "Idő: " + (endTimeParallel - startTimeParallel).TotalSeconds + " másodperc";
 
 
@@ -287,7 +289,7 @@ namespace Parallel_visualization
             g.FillRectangle(new SolidBrush(Color.White), rect);
             g2.FillRectangle(new SolidBrush(Color.White), rectPar);
 
-
+            int tmp;
             for (int i = 0; i < arrSequential.Length; i++)
             {
                 //arrorig[i] = randNum.Next(Min, Max);
@@ -299,8 +301,14 @@ namespace Parallel_visualization
 
                 int width = 10;
                 int height = pictureBox1.Height;
-                Rectangle rect2 = new Rectangle(x / widthScale, y, width / widthScale, height);
-
+                int tmpz= width / widthScale;
+                if ((width / widthScale)==0)
+                {
+                    tmpz = 1;
+                }
+                
+                Rectangle rect2 = new Rectangle(x / widthScale, y, tmpz, height);
+                //Debug.WriteLine("x: "+rect2.X+" w: "+rect2.Width);
                 // Fill ellipse on screen.
                 g.FillRectangle(redBrush, rect2);
                 g2.FillRectangle(redBrush, rect2);

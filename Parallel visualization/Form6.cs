@@ -21,7 +21,9 @@ namespace Parallel_visualization
 
         private void Form6_Load(object sender, EventArgs e)
         {
-
+            cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
+            ramCounter = new PerformanceCounter("Memory", "Available MBytes");
+            timer1.Start();
         }
 
         private int MaxIterations;
@@ -118,19 +120,46 @@ namespace Parallel_visualization
             return (value - min1) * (max2 - min2) / (max1 - min1) + min2;
         }
 
+        private void clrEver()
+        {
+            //Ssignal = true;
+            
+            ramindex = 0;
+            ramTotal = 0;
+            
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
+            Ssignal = true;
+            
             Bitmap imagenew = Generate(800, 800, (int)numericUpDown1.Value);
+            //timer1.Stop();
+
+            Ssignal=false;
+            ramAvarage = ramTotal / ramindex;
+            ramAvarage = (ramAvarage / 1024) / 1024;
+            clrEver();
+            //Debug.WriteLine("ramAvarage"+ramAvarage);
+            label6.Text = ramAvarage.ToString("00")+" MB";
+
             stopwatch.Stop();
+            
             pictureBox1.Image = imagenew;
             label2.Text = "time: " + (double)stopwatch.ElapsedMilliseconds / 1000;
         }
 
+        private bool Ssignal=false;
         private void button2_Click(object sender, EventArgs e)
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
+            Ssignal = true;
             Bitmap imagenew2 = SeqGenerate(800, 800);
+            Ssignal = false;
+            ramAvarage = ramTotal / ramindex;
+            ramAvarage = (ramAvarage / 1024) / 1024;
+            clrEver();
+            label4.Text = ramAvarage.ToString("00") + " MB";
             stopwatch.Stop();
             pictureBox2.Image = imagenew2;
 
@@ -143,11 +172,42 @@ namespace Parallel_visualization
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
 
-            Bitmap imagenew2 = Generate(800, 800, (int)numericUpDown2.Value);
+            Bitmap imagenew2 = Generate(800, 800, (int)numericUpDown1.Value);
             stopwatch.Stop();
             pictureBox2.Image = imagenew2;
 
             label1.Text = "time: " + (double)stopwatch.ElapsedMilliseconds / 1000;
+        }
+
+        PerformanceCounter cpuCounter;
+        PerformanceCounter ramCounter;
+
+        private int ramindex =0;
+        private long ramTotal = 0;
+        private double ramAvarage=0;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            float fRam = cpuCounter.NextValue();
+            float fCpu = ramCounter.NextValue();
+
+
+
+            //Debug.WriteLine("ramTotal"+ramTotal);
+            if (Ssignal==false)
+            {
+                Process proc = Process.GetCurrentProcess();
+                ramTotal += proc.PrivateMemorySize64;
+                ramindex++;
+                //timer1.Stop();
+            }
+            
+
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

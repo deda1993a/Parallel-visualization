@@ -28,206 +28,245 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            label1 = new Label();
-            button2 = new Button();
-            label2 = new Label();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            numericUpDown1 = new NumericUpDown();
-            numericUpDown2 = new NumericUpDown();
-            label3 = new Label();
-            numericUpDown3 = new NumericUpDown();
-            label4 = new Label();
-            button3 = new Button();
-            label5 = new Label();
-            label6 = new Label();
-            numericUpDown4 = new NumericUpDown();
-            label7 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown4).BeginInit();
-            SuspendLayout();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            this.SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(52, 70);
-            button1.Name = "button1";
-            button1.Size = new Size(169, 23);
-            button1.TabIndex = 0;
-            button1.Text = "Szekvenciálisan végrehajtott";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            this.button1.Location = new System.Drawing.Point(59, 93);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(193, 31);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Szekvenciálisan végrehajtott";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(227, 74);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 1;
-            label1.Text = "label1";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(259, 99);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "label1";
             // 
             // button2
             // 
-            button2.Location = new Point(399, 70);
-            button2.Name = "button2";
-            button2.Size = new Size(168, 23);
-            button2.TabIndex = 2;
-            button2.Text = "Párhuzamosan végrehajtott";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            this.button2.Location = new System.Drawing.Point(456, 93);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(192, 31);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Párhuzamosan végrehajtott";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(573, 74);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 3;
-            label2.Text = "label2";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(655, 99);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "label2";
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(36, 159);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(340, 308);
-            pictureBox1.TabIndex = 4;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.Location = new System.Drawing.Point(41, 212);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(389, 411);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            pictureBox2.Location = new Point(399, 159);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(362, 308);
-            pictureBox2.TabIndex = 5;
-            pictureBox2.TabStop = false;
+            this.pictureBox2.Location = new System.Drawing.Point(456, 212);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(414, 411);
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
             // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(133, 12);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(120, 23);
-            numericUpDown1.TabIndex = 6;
-            numericUpDown1.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            this.numericUpDown1.Location = new System.Drawing.Point(152, 16);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(137, 27);
+            this.numericUpDown1.TabIndex = 6;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // numericUpDown2
             // 
-            numericUpDown2.Location = new Point(259, 12);
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(120, 23);
-            numericUpDown2.TabIndex = 7;
-            numericUpDown2.Value = new decimal(new int[] { 20, 0, 0, 0 });
+            this.numericUpDown2.Location = new System.Drawing.Point(296, 16);
+            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(137, 27);
+            this.numericUpDown2.TabIndex = 7;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(36, 14);
-            label3.Name = "label3";
-            label3.Size = new Size(91, 15);
-            label3.TabIndex = 8;
-            label3.Text = "Véletlenszámok:";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(41, 19);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(115, 20);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Véletlenszámok:";
             // 
             // numericUpDown3
             // 
-            numericUpDown3.Location = new Point(133, 40);
-            numericUpDown3.Maximum = new decimal(new int[] { 1410065408, 2, 0, 0 });
-            numericUpDown3.Name = "numericUpDown3";
-            numericUpDown3.Size = new Size(120, 23);
-            numericUpDown3.TabIndex = 9;
-            numericUpDown3.Value = new decimal(new int[] { 100, 0, 0, 0 });
-            numericUpDown3.ValueChanged += numericUpDown3_ValueChanged;
+            this.numericUpDown3.Location = new System.Drawing.Point(152, 55);
+            this.numericUpDown3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.numericUpDown3.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(137, 27);
+            this.numericUpDown3.TabIndex = 9;
+            this.numericUpDown3.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(45, 41);
-            label4.Name = "label4";
-            label4.Size = new Size(74, 15);
-            label4.TabIndex = 10;
-            label4.Text = "Tömb méret:";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(51, 55);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 20);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Tömb méret:";
             // 
             // button3
             // 
-            button3.Location = new Point(261, 43);
-            button3.Name = "button3";
-            button3.Size = new Size(118, 23);
-            button3.TabIndex = 11;
-            button3.Text = "Tömb feltöltés";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            this.button3.Location = new System.Drawing.Point(298, 57);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(135, 31);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Tömb feltöltés";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(52, 96);
-            label5.Name = "label5";
-            label5.Size = new Size(38, 15);
-            label5.TabIndex = 14;
-            label5.Text = "label5";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(59, 128);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 20);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "label5";
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(399, 96);
-            label6.Name = "label6";
-            label6.Size = new Size(38, 15);
-            label6.TabIndex = 15;
-            label6.Text = "label6";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(456, 128);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 20);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "label6";
             // 
             // numericUpDown4
             // 
-            numericUpDown4.Location = new Point(556, 33);
-            numericUpDown4.Maximum = new decimal(new int[] { 20, 0, 0, 0 });
-            numericUpDown4.Minimum = new decimal(new int[] { 2, 0, 0, 0 });
-            numericUpDown4.Name = "numericUpDown4";
-            numericUpDown4.Size = new Size(120, 23);
-            numericUpDown4.TabIndex = 16;
-            numericUpDown4.Value = new decimal(new int[] { 4, 0, 0, 0 });
+            this.numericUpDown4.Location = new System.Drawing.Point(635, 44);
+            this.numericUpDown4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.numericUpDown4.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.numericUpDown4.Minimum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(137, 27);
+            this.numericUpDown4.TabIndex = 16;
+            this.numericUpDown4.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(475, 35);
-            label7.Name = "label7";
-            label7.Size = new Size(75, 15);
-            label7.TabIndex = 17;
-            label7.Text = "Szálak száma";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(543, 47);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(97, 20);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Szálak száma";
             // 
             // Form2
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(794, 765);
-            Controls.Add(label7);
-            Controls.Add(numericUpDown4);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(button3);
-            Controls.Add(label4);
-            Controls.Add(numericUpDown3);
-            Controls.Add(label3);
-            Controls.Add(numericUpDown2);
-            Controls.Add(numericUpDown1);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
-            Controls.Add(label2);
-            Controls.Add(button2);
-            Controls.Add(label1);
-            Controls.Add(button1);
-            Name = "Form2";
-            Text = "Merge Sort";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown4).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(907, 1020);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.numericUpDown4);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.numericUpDown3);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "Form2";
+            this.Text = "Merge Sort";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

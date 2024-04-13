@@ -99,6 +99,8 @@ namespace Parallel_visualization
             return hull;
         }
 
+
+
         private void DrawHull(Stack<Point> hull, PictureBox pictureBox)
         {
             Bitmap bitmap = new Bitmap(pictureBox.Width, pictureBox.Height);
@@ -178,6 +180,11 @@ namespace Parallel_visualization
         {
            // ParallelGrahamScan(pointsss);
            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

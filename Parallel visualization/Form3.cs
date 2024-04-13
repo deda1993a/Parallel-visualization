@@ -12,6 +12,7 @@ namespace Parallel_visualization
 
         private Bitmap OgImage;
         private Bitmap NeImage;
+ 
         private void button1_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -19,6 +20,7 @@ namespace Parallel_visualization
 
                 textBox1.Text = openFileDialog1.FileName;
                 OgImage = new Bitmap(openFileDialog1.FileName);
+              
             }
 
         }
@@ -26,7 +28,9 @@ namespace Parallel_visualization
         private void button3_Click(object sender, EventArgs e)
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
-            NeImage = OgImage;
+            
+            NeImage = (Bitmap)OgImage.Clone();
+
             ParGrayscale(NeImage);
             stopwatch.Stop();
             label2.Text = "time: " + (double)stopwatch.ElapsedMilliseconds / 1000;
@@ -63,6 +67,7 @@ namespace Parallel_visualization
 
 
                 pic.UnlockBits(bitmapData);
+                pictureBox4.Image = OgImage;
                 pictureBox2.Image = pic;
             }
 
@@ -95,6 +100,7 @@ namespace Parallel_visualization
                     }
                 }
                 pic.UnlockBits(bitmapData);
+                pictureBox3.Image = OgImage;
                 pictureBox1.Image = pic;
             }
         }
@@ -103,7 +109,9 @@ namespace Parallel_visualization
         private void button2_Click(object sender, EventArgs e)
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
-            NeImage = OgImage;
+          
+            NeImage = (Bitmap)OgImage.Clone();
+            
             SeqGrayscale(NeImage);
             stopwatch.Stop();
             label1.Text = "time: " + (double)stopwatch.ElapsedMilliseconds / 1000;
@@ -151,6 +159,19 @@ namespace Parallel_visualization
             }
             stopwatch.Stop();
             label2.Text = "time: " + (double)stopwatch.ElapsedMilliseconds / 1000;
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            //timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            PerformanceCounter myAppCpu =
+    new PerformanceCounter(
+        "Process", "% Processor Time", "Parallel visualization", true);
+            Debug.WriteLine(myAppCpu.NextValue());
         }
     }
 }

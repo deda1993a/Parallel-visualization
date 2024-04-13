@@ -34,13 +34,15 @@ namespace Parallel_visualization
 
         private void button2_Click(object sender, EventArgs e)
         {
-            NeImage = OgImage;
+            NeImage = (Bitmap)OgImage.Clone();
+
             Stopwatch stopwatch = Stopwatch.StartNew();
 
             OutputB = SequenErode(NeImage);
             stopwatch.Stop();
+            pictureBox3.Image = OgImage;
             pictureBox1.Image = OutputB;
-            label1.Text = "time: " + (double)stopwatch.ElapsedMilliseconds / 1000;
+            label1.Text = "idő: " + (double)stopwatch.ElapsedMilliseconds / 1000+ " másodperc";
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -50,17 +52,17 @@ namespace Parallel_visualization
 
         private void button3_Click(object sender, EventArgs e)
         {
-            NeImage = OgImage;
+            NeImage = (Bitmap)OgImage.Clone();
 
             Stopwatch stopwatch = Stopwatch.StartNew();
 
             OutputB = Erode(NeImage);
             stopwatch.Stop();
             pictureBox2.Image = OutputB;
-            label2.Text = "time: " + (double)stopwatch.ElapsedMilliseconds / 1000;
+            label2.Text = "idő: " + (double)stopwatch.ElapsedMilliseconds / 1000+ " másodperc";
 
             
-            pictureBox2.Image = OutputB;
+            pictureBox4.Image = OgImage;
 
         }
 
