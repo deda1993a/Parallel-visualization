@@ -13,11 +13,15 @@ namespace Parallel_visualization
         private Bitmap OgImage;
         private Bitmap NeImage;
  
+        private int allPic;
+        private int complPic = 0;
+        List<Bitmap> listOfBitMaps = new List<Bitmap>();
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-
+                allPic = 1;
                 textBox1.Text = openFileDialog1.FileName;
                 OgImage = new Bitmap(openFileDialog1.FileName);
               
@@ -27,18 +31,27 @@ namespace Parallel_visualization
 
         private void button3_Click(object sender, EventArgs e)
         {
+            complPic = 0;
+            listOfBitMaps.Clear();
             Stopwatch stopwatch = Stopwatch.StartNew();
-            
+            complPic++;
+            label4.Text = "Képek: " + allPic + "/" + complPic;
+
             NeImage = (Bitmap)OgImage.Clone();
 
             ParGrayscale(NeImage);
+            listOfBitMaps.Add(NeImage);
             stopwatch.Stop();
-            label2.Text = "time: " + (double)stopwatch.ElapsedMilliseconds / 1000;
-
+            label2.Text = "idő: " + (double)stopwatch.ElapsedMilliseconds / 1000 + " másodperc";
+            for (int i = 0; i < listOfBitMaps.Count; i++)
+            {
+                listOfBitMaps[i].Save(folderBrowserDialog2.SelectedPath + "\\" + i + ".bmp", ImageFormat.Bmp);
+            }
         }
 
         private void ParGrayscale(Bitmap pic)
         {
+            label5.Text = "Felbontás: " + pic.Width + "x" + pic.Height;
             unsafe
             {
                 BitmapData bitmapData = pic.LockBits(new Rectangle(0, 0, pic.Width, pic.Height), ImageLockMode.ReadWrite, pic.PixelFormat);
@@ -75,6 +88,7 @@ namespace Parallel_visualization
 
         private void SeqGrayscale(Bitmap pic)
         {
+            label5.Text = "Felbontás: " + pic.Width+"x"+pic.Height;
             unsafe
             {
                 BitmapData bitmapData = pic.LockBits(new Rectangle(0, 0, pic.Width, pic.Height), ImageLockMode.ReadWrite, pic.PixelFormat);
@@ -108,13 +122,22 @@ namespace Parallel_visualization
         //gthtz
         private void button2_Click(object sender, EventArgs e)
         {
+            complPic = 0;
+            listOfBitMaps.Clear();
             Stopwatch stopwatch = Stopwatch.StartNew();
-          
+            complPic++;
+            label3.Text = "Képek: " + allPic + "/" + complPic;
             NeImage = (Bitmap)OgImage.Clone();
             
             SeqGrayscale(NeImage);
+            listOfBitMaps.Add(NeImage);
             stopwatch.Stop();
-            label1.Text = "time: " + (double)stopwatch.ElapsedMilliseconds / 1000;
+
+            label1.Text = "idő: " + (double)stopwatch.ElapsedMilliseconds / 1000+" másodperc";
+            for (int i = 0; i < listOfBitMaps.Count; i++)
+            {
+                listOfBitMaps[i].Save(folderBrowserDialog2.SelectedPath + "\\" + i + ".bmp", ImageFormat.Bmp);
+            }
         }
 
         private string[] dirs;
@@ -122,48 +145,71 @@ namespace Parallel_visualization
         {
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
+                textBox2.Text=folderBrowserDialog1.SelectedPath;
                 dirs = Directory.GetFiles(folderBrowserDialog1.SelectedPath);
+                allPic = dirs.Length;
             }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            complPic = 0;
+            listOfBitMaps.Clear();
             Stopwatch stopwatch = Stopwatch.StartNew();
-            //NeImage = OgImage;
+       
             foreach (string selected in dirs)
             {
-
-                NeImage = new Bitmap(selected);
-
+                OgImage = new Bitmap(selected);
+                NeImage=(Bitmap)OgImage.Clone();
+                complPic++;
+                label3.Text = "Képek: "+allPic+"/"+complPic;
 
                 SeqGrayscale(NeImage);
+                listOfBitMaps.Add(NeImage);
+
+                
+
             }
             stopwatch.Stop();
-            label1.Text = "time: " + (double)stopwatch.ElapsedMilliseconds / 1000;
+            label1.Text = "idő: " + (double)stopwatch.ElapsedMilliseconds / 1000 + " másodperc";
+            for(int i = 0; i < listOfBitMaps.Count; i++)
+            {
+                listOfBitMaps[i].Save(folderBrowserDialog2.SelectedPath + "\\" + i + ".bmp", ImageFormat.Bmp);
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
+            complPic = 0;
+            listOfBitMaps.Clear();
             Stopwatch stopwatch = Stopwatch.StartNew();
             //NeImage = OgImage;
             foreach (string selected in dirs)
             {
-
-                NeImage = new Bitmap(selected);
+                complPic++;
+                label4.Text = "Képek: " + allPic + "/" + complPic;
+                OgImage = new Bitmap(selected);
+                NeImage = (Bitmap)OgImage.Clone();
 
 
                 ParGrayscale(NeImage);
-
+                listOfBitMaps.Add(NeImage);
+                //NeImage.Save(folderBrowserDialog2.SelectedPath + "\\" + complPic + ".bmp", ImageFormat.Bmp);
 
 
             }
             stopwatch.Stop();
-            label2.Text = "time: " + (double)stopwatch.ElapsedMilliseconds / 1000;
+            label2.Text = "idő: " + (double)stopwatch.ElapsedMilliseconds / 1000 + " másodperc";
+            for (int i = 0; i < listOfBitMaps.Count; i++)
+            {
+                listOfBitMaps[i].Save(folderBrowserDialog2.SelectedPath + "\\" + i + ".bmp", ImageFormat.Bmp);
+            }
         }
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            //timer1.Start();
+           
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -172,6 +218,58 @@ namespace Parallel_visualization
     new PerformanceCounter(
         "Process", "% Processor Time", "Parallel visualization", true);
             Debug.WriteLine(myAppCpu.NextValue());
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (File.Exists(textBox1.Text) == true && Directory.Exists(textBox3.Text) == true)
+            {
+                button2.Enabled = true;
+                button3.Enabled = true;
+            }
+            else
+            {
+                button2.Enabled = false;
+                button3.Enabled = false;
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            if (Directory.Exists(textBox2.Text) == true && Directory.Exists(textBox3.Text) == true)
+            {
+                button5.Enabled = true;
+                button6.Enabled = true;
+            }
+            else
+            {
+                button5.Enabled = false;
+                button6.Enabled = false;
+            }
+
+            if (File.Exists(textBox1.Text) == true && Directory.Exists(textBox3.Text) == true)
+            {
+                button2.Enabled = true;
+                button3.Enabled = true;
+            }
+            else
+            {
+                button2.Enabled = false;
+                button3.Enabled = false;
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog2.ShowDialog() == DialogResult.OK)
+            {
+                textBox3.Text = folderBrowserDialog2.SelectedPath;
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -28,10 +28,7 @@ namespace Parallel_visualization
 
         private void grahamScanForConvexHullToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form Form5 = new Form5();
 
-
-            Form5.Show();
         }
 
         private void erosionToolStripMenuItem_Click(object sender, EventArgs e)

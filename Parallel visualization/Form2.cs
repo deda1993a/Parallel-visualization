@@ -11,10 +11,9 @@ namespace Parallel_visualization
 
         private void Form2_Paint(object sender, PaintEventArgs e)
         {
-            //Graphics g = e.Graphics;
-            //g.FillEllipse(red, kor);
+        
             Graphics g = pictureBox2.CreateGraphics();
-            // Rajzolas...                     
+                               
 
 
 
@@ -24,7 +23,7 @@ namespace Parallel_visualization
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            //this.DoubleBuffered = true;
+          
         }
 
 
@@ -35,8 +34,7 @@ namespace Parallel_visualization
         private int part = 0;
 
         private int widthScale = 1;
-        private int heightScale = 1;
-
+   
         static int Merge(int[] arr, int l, int m, int r)
         {
             int n1 = m - l + 1;
@@ -64,7 +62,7 @@ namespace Parallel_visualization
                 {
                     arr[k] = R[j];
                     j++;
-                    changes += n1 - i; // Count position changes
+                    changes += n1 - i; 
                 }
                 k++;
             }
@@ -112,51 +110,18 @@ namespace Parallel_visualization
                 MergeSortSequential(arrParallel, low, mid, ref changes);
                 MergeSortSequential(arrParallel, mid + 1, high, ref changes);
                 changes += Merge(arrParallel, low, mid, high);
-                Debug.WriteLine("Ch: "+changes);
+                Debug.WriteLine("Ch: " + changes);
                 allParChange += changes;
                 threadCount.Add(changes);
-                // textBox1.AppendText("A " + Thread.CurrentThread.ManagedThreadId + " nevű szál: " + changes + "cserát hajtott végre\r\n");
-
+               
 
             }
         }
 
 
 
-        static void PrintArray(int[] arr)
-        {
-            foreach (int num in arr)
-                Console.Write(num + " ");
-            Console.WriteLine();
-        }
 
-
-        /*void sort(int[] arr, int l, int r)
-        {
-            var watch = Stopwatch.StartNew();
-            // something to time
-
-            if (l < r)
-            {
-
-                // Find the middle point
-                int m = l + (r - l) / 2;
-
-                // Sort first and second halves
-                sort(arr, l, m);
-                sort(arr, m + 1, r);
-
-                // Merge the sorted halves
-                merge(arr, l, m, r);
-                Invoke((MethodInvoker)delegate
-                {
-                    label1.Text = "time: " + (double)watch.ElapsedMilliseconds / 1000;
-
-                });
-            }
-            watch.Stop();
-
-        }*/
+      
 
 
 
@@ -168,7 +133,7 @@ namespace Parallel_visualization
             MergeSortSequential(arrSequential, 0, MAX - 1, ref changesSequential);
             DateTime endTimeSequential = DateTime.Now;
             Console.WriteLine("Sorted array:");
-            //PrintArray(arrSequential);
+           
             label5.Text = "Idő: " + (endTimeSequential - startTimeSequential).TotalSeconds + " másodperc";
             label1.Text = changesSequential + " csere történt: ";
 
@@ -177,22 +142,24 @@ namespace Parallel_visualization
             SolidBrush redBrush = new SolidBrush(Color.Red);
 
             Rectangle rect = new Rectangle(0, 0, pictureBox1.Width, pictureBox1.Height);
-
-            // Fill rectangle to screen.
+            valueChanged();
+            
             g.FillRectangle(new SolidBrush(Color.White), rect);
             for (int i = 0; i < arrSequential.Length; i++)
             {
-                //arrorig[i] = randNum.Next(Min, Max);
-                //Debug.WriteLine(arr[i]);
 
-                // Create rectangle for ellipse.
-                int x = i + 10;
+                int x = (i * 3) + 10;
                 int y = pictureBox1.Height - arrSequential[i] * 10;
                 int width = 10;
+                int tmpz = width / widthScale;
                 int height = pictureBox1.Height;
-                Rectangle rect2 = new Rectangle((x / widthScale)+1, y, width / widthScale, height);
-                
-                // Fill ellipse on screen.
+                if ((tmpz) == 0)
+                {
+                    tmpz = 1;
+                }
+                Rectangle rect2 = new Rectangle((x / widthScale) + 1, y, tmpz, height);
+
+   
                 g.FillRectangle(redBrush, rect2);
 
             }
@@ -201,15 +168,12 @@ namespace Parallel_visualization
 
         }
 
-        /*private int Min;
-        private int Max;
-        private int[] arrorig;
-        private int[] arr;*/
+
         private void button2_Click(object sender, EventArgs e)
         {
             THREAD_MAX = (int)numericUpDown4.Value;
 
-            part = 0; // Reset part counter for parallel merge sort
+            part = 0;
 
             Debug.WriteLine("\nParallel Merge Sort:");
             DateTime startTimeParallel = DateTime.Now;
@@ -228,34 +192,35 @@ namespace Parallel_visualization
             Merge(arrParallel, 0, (MAX - 1) / 2, MAX - 1);
             DateTime endTimeParallel = DateTime.Now;
 
-            //Console.WriteLine("Sorted array:");
-            //PrintArray(arrParallel);
+
 
             Graphics g = pictureBox2.CreateGraphics();
             SolidBrush redBrush = new SolidBrush(Color.Red);
 
-            Rectangle rect = new Rectangle(0, 0, pictureBox2.Width, pictureBox2.Height);
-
-            // Fill rectangle to screen.
+            Rectangle rect = new Rectangle(0, 0, pictureBox1.Width, pictureBox1.Height);
+            valueChanged();
+            
             g.FillRectangle(new SolidBrush(Color.White), rect);
-            for (int i = 0; i < arrParallel.Length; i++)
+            for (int i = 0; i < arrSequential.Length; i++)
             {
-                //arrorig[i] = randNum.Next(Min, Max);
-                //Debug.WriteLine(arr[i]);
 
-                // Create rectangle for ellipse.
-                int x = i + 10;
-                int y = pictureBox1.Height - arrParallel[i] * 10;
+                int x = (i * 3) + 10;
+                int y = pictureBox1.Height - arrSequential[i] * 10;
                 int width = 10;
+                int tmpz = width / widthScale;
                 int height = pictureBox1.Height;
-                Rectangle rect2 = new Rectangle(x / widthScale, y, width / widthScale, height);
+                if ((tmpz) == 0)
+                {
+                    tmpz = 1;
+                }
+                Rectangle rect2 = new Rectangle((x / widthScale) + 1, y, tmpz, height);
 
-                // Fill ellipse on screen.
+   
                 g.FillRectangle(redBrush, rect2);
 
             }
             label2.Text = allParChange + " csere történt";
-            //Debug.WriteLine(allParChange);
+      
             label6.Text = "Idő: " + (endTimeParallel - startTimeParallel).TotalSeconds + " másodperc";
 
 
@@ -277,7 +242,10 @@ namespace Parallel_visualization
                 arrSequential[i] = num;
                 arrParallel[i] = num;
             }
-
+            valueChanged();
+            Debug.WriteLine("Updated widthScale: " + widthScale);  // Debug print
+            button1.Enabled = true;
+            button2.Enabled = true;
             Graphics g = pictureBox1.CreateGraphics();
             Graphics g2 = pictureBox2.CreateGraphics();
             SolidBrush redBrush = new SolidBrush(Color.Red);
@@ -292,24 +260,20 @@ namespace Parallel_visualization
             int tmp;
             for (int i = 0; i < arrSequential.Length; i++)
             {
-                //arrorig[i] = randNum.Next(Min, Max);
-                //Debug.WriteLine(arr[i]);
 
-                // Create rectangle for ellipse.
                 int x = (i * 3) + 10;
                 int y = pictureBox1.Height - arrSequential[i] * 10;
 
                 int width = 10;
                 int height = pictureBox1.Height;
-                int tmpz= width / widthScale;
-                if ((width / widthScale)==0)
+                int tmpz = width / widthScale;
+                if ((tmpz) == 0)
                 {
                     tmpz = 1;
                 }
-                
+
                 Rectangle rect2 = new Rectangle(x / widthScale, y, tmpz, height);
-                //Debug.WriteLine("x: "+rect2.X+" w: "+rect2.Width);
-                // Fill ellipse on screen.
+
                 g.FillRectangle(redBrush, rect2);
                 g2.FillRectangle(redBrush, rect2);
             }
@@ -318,34 +282,35 @@ namespace Parallel_visualization
 
         }
 
-        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        private void valueChanged()
         {
             Debug.WriteLine("it is happened");
-            if ((int)numericUpDown3.Value > 3350)
+
+            if ((int)numericUpDown3.Value > 5570)
             {
-                widthScale = 11;
+                widthScale = 150;
                 Debug.WriteLine("scale: " + widthScale);
             }
-            else if ((int)numericUpDown3.Value > 2650)
+            else if ((int)numericUpDown3.Value > 890)
             {
-                widthScale = 10;
+                widthScale = 45;
                 Debug.WriteLine("scale: " + widthScale);
             }
-            else if ((int)numericUpDown3.Value > 950)
+            else if ((int)numericUpDown3.Value > 120)
             {
-                widthScale = 8;
+                widthScale = 7;
                 Debug.WriteLine("scale: " + widthScale);
             }
-            else if ((int)numericUpDown3.Value > 300)
-            {
-                widthScale = 3;
-                Debug.WriteLine("scale: " + widthScale);
-            }
-            else if ((int)numericUpDown3.Value <= 300)
+            else if ((int)numericUpDown3.Value <= 120)
             {
                 widthScale = 1;
                 Debug.WriteLine("scale: " + widthScale);
             }
+        }
+
+        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        {
+            valueChanged();
         }
     }
 }

@@ -33,7 +33,6 @@
             this.mergeSortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grayscaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.erosionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.grahamScanForConvexHullToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mandelbrotSetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +55,6 @@
             this.mergeSortToolStripMenuItem,
             this.grayscaleToolStripMenuItem,
             this.erosionToolStripMenuItem,
-            this.grahamScanForConvexHullToolStripMenuItem,
             this.mandelbrotSetToolStripMenuItem});
             this.fájlToolStripMenuItem.Name = "fájlToolStripMenuItem";
             this.fájlToolStripMenuItem.Size = new System.Drawing.Size(45, 24);
@@ -65,36 +63,29 @@
             // mergeSortToolStripMenuItem
             // 
             this.mergeSortToolStripMenuItem.Name = "mergeSortToolStripMenuItem";
-            this.mergeSortToolStripMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.mergeSortToolStripMenuItem.Size = new System.Drawing.Size(290, 26);
             this.mergeSortToolStripMenuItem.Text = "Merge Sort";
             this.mergeSortToolStripMenuItem.Click += new System.EventHandler(this.mergeSortToolStripMenuItem_Click);
             // 
             // grayscaleToolStripMenuItem
             // 
             this.grayscaleToolStripMenuItem.Name = "grayscaleToolStripMenuItem";
-            this.grayscaleToolStripMenuItem.Size = new System.Drawing.Size(283, 26);
-            this.grayscaleToolStripMenuItem.Text = "Grayscale";
+            this.grayscaleToolStripMenuItem.Size = new System.Drawing.Size(290, 26);
+            this.grayscaleToolStripMenuItem.Text = "Szürkeárnyalatos konverzió";
             this.grayscaleToolStripMenuItem.Click += new System.EventHandler(this.grayscaleToolStripMenuItem_Click);
             // 
             // erosionToolStripMenuItem
             // 
             this.erosionToolStripMenuItem.Name = "erosionToolStripMenuItem";
-            this.erosionToolStripMenuItem.Size = new System.Drawing.Size(283, 26);
-            this.erosionToolStripMenuItem.Text = "Erosion";
+            this.erosionToolStripMenuItem.Size = new System.Drawing.Size(290, 26);
+            this.erosionToolStripMenuItem.Text = "Morfológiai erózió";
             this.erosionToolStripMenuItem.Click += new System.EventHandler(this.erosionToolStripMenuItem_Click);
-            // 
-            // grahamScanForConvexHullToolStripMenuItem
-            // 
-            this.grahamScanForConvexHullToolStripMenuItem.Name = "grahamScanForConvexHullToolStripMenuItem";
-            this.grahamScanForConvexHullToolStripMenuItem.Size = new System.Drawing.Size(283, 26);
-            this.grahamScanForConvexHullToolStripMenuItem.Text = "Graham scan for Convex Hull";
-            this.grahamScanForConvexHullToolStripMenuItem.Click += new System.EventHandler(this.grahamScanForConvexHullToolStripMenuItem_Click);
             // 
             // mandelbrotSetToolStripMenuItem
             // 
             this.mandelbrotSetToolStripMenuItem.Name = "mandelbrotSetToolStripMenuItem";
-            this.mandelbrotSetToolStripMenuItem.Size = new System.Drawing.Size(283, 26);
-            this.mandelbrotSetToolStripMenuItem.Text = "Mandelbrot set";
+            this.mandelbrotSetToolStripMenuItem.Size = new System.Drawing.Size(285, 26);
+            this.mandelbrotSetToolStripMenuItem.Text = "Mandelbrot halmaz generáló";
             this.mandelbrotSetToolStripMenuItem.Click += new System.EventHandler(this.mandelbrotSetToolStripMenuItem_Click);
             // 
             // Form1
@@ -106,7 +97,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Párhuzamos algoritmusok";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -121,7 +112,6 @@
         private ToolStripMenuItem mergeSortToolStripMenuItem;
         private ToolStripMenuItem grayscaleToolStripMenuItem;
         private ToolStripMenuItem erosionToolStripMenuItem;
-        private ToolStripMenuItem grahamScanForConvexHullToolStripMenuItem;
         private ToolStripMenuItem mandelbrotSetToolStripMenuItem;
     }
 }

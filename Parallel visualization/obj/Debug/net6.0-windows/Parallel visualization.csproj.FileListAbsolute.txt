@@ -135,7 +135,6 @@ c:\Users\demet\source\repos\Parallel-visualization04.10\Parallel visualization\o
 c:\Users\demet\source\repos\Parallel-visualization04.10\Parallel visualization\obj\Debug\net6.0-windows\Parallel_visualization.Form2.resources
 c:\Users\demet\source\repos\Parallel-visualization04.10\Parallel visualization\obj\Debug\net6.0-windows\Parallel_visualization.Form3.resources
 c:\Users\demet\source\repos\Parallel-visualization04.10\Parallel visualization\obj\Debug\net6.0-windows\Parallel_visualization.Form4.resources
-c:\Users\demet\source\repos\Parallel-visualization04.10\Parallel visualization\obj\Debug\net6.0-windows\Parallel_visualization.Form5.resources
 c:\Users\demet\source\repos\Parallel-visualization04.10\Parallel visualization\obj\Debug\net6.0-windows\Parallel_visualization.Form6.resources
 c:\Users\demet\source\repos\Parallel-visualization04.10\Parallel visualization\obj\Debug\net6.0-windows\Parallel visualization.csproj.GenerateResource.cache
 c:\Users\demet\source\repos\Parallel-visualization04.10\Parallel visualization\obj\Debug\net6.0-windows\Parallel visualization.GeneratedMSBuildEditorConfig.editorconfig
